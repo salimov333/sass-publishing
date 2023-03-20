@@ -2,7 +2,6 @@
   "name": "sass-publishing",
   "version": "1.0.0",
   "description": "Create and deploy a SASS project",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sass --watch main.scss main.css",

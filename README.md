@@ -55,6 +55,7 @@ npm init -y
 npm install --save-dev sass
 npm install bootstrap
 ```
+- Remove the "main" field in package.json
 - Create .gitignore and add node_modules
 - Install a VSC extension => live Sass Compiler
 - To Run the compiler => Click on watch Sass
@@ -86,6 +87,7 @@ npm install --save-dev gh-pages parcel
 
 ```bash
 git add . && git commit -m "ready to deploy"
+git push
 npm run build
 npm run deploy
 ```
