@@ -1,0 +1,22 @@
+{
+  "name": "sass-publishing",
+  "version": "1.0.0",
+  "description": "Create and deploy a SASS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch main.scss main.css",
+    "build": "parcel build index.html --dist-dir build --public-url ./",
+    "deploy": "gh-pages -d build"
+  },
+  "author": "salimov333",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.8.3",
+    "sass": "^1.59.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
