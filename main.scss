@@ -1,5 +1,144 @@
+
+// 1. Variables in sass
+// Schau mal die Datei `_variables.scss`
+@import "./variables";
+
+// Include Bootstrap's source Sass
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+
 body {
-  background-color: #f39f9f;
-  color: #131355;
+  background-color: $color-1;
+  color: $color-3;
+  font-family: $font-family-base;
   padding: 1rem;
+}
+
+.box {
+  font-size: $font-size-1;
+  border: 1px solid $color-2;
+  margin-bottom: $margin;
+  padding: $padding;
+}
+.special {
+  background-color: $color-2;
+}
+
+// 2. Nesting rules
+.nav {
+  border: $color-2 2px solid;
+  .menu {
+    font-size: $font-size-3;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    li {
+      cursor: pointer;
+      &:hover {
+        color: $color-2;
+        transition: color 0.5s;
+      }
+    }
+  }
+  + p {
+    background-color: $color-2;
+  }
+}
+
+// 3. map
+.map_container {
+  background-color: #392203;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  large: 1024px,
+  x-large: 1200px,
+);
+
+@media screen and (min-width: map-get($breakpoints, small)) {
+  .map_container {
+    background-color: #640c0c;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: map-get($breakpoints, medium)) {
+  .map_container {
+    background-color: #614e09;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: map-get($breakpoints, large)) {
+  .map_container {
+    background-color: #09610a;
+    border-radius: 50%;
+  }
+}
+
+// 4. @extend
+.button {
+  display: block;
+  border: 1px solid #007bff;
+  background-color: transparent;
+  box-shadow: 2px 2px 5px gainsboro;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+}
+
+.submit-button {
+  @extend .button;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+}
+
+// 5. @mixin and @include
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin container-style {
+  color: #faeded;
+  margin: 1rem 0;
+  background-color: transparent;
+  border: 1px solid gray;
+}
+
+.container-1 {
+  @include flex-center;
+  @include container-style;
+  width: 200px;
+  height: 100px;
+}
+.container-2 {
+  @include flex-center;
+  @include container-style;
+  width: 400px;
+  height: 50px;
+}
+
+// 6. @import and partial
+// Schau mal die Datei `_variables.scss`
+
+// 7. Bootstrap Sass
+// 1- Installieren Sie Bootstrap über npm:
+// npm install bootstrap
+// 2- Importieren Sie Bootstrap:
+// @import "node_modules/bootstrap/scss/bootstrap";
+
+
+// Anpassen von Bootstrap-Komponenten
+.btn-primary {
+  background-color: $primary;
+}
+
+.btn-secondary {
+  background-color: $secondary;
 }

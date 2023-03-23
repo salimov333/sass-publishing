@@ -17,7 +17,7 @@
         - Installing SASS: npm install -g sass
         - Creating input: .scss vs. .sass, nesting CSS rules
         - Comparing the output: sass [input file] [output file]
-
+        
         Build scripts: Using npm as a build tool:
         - DCI Project boilerplate I:  https://github.com/DigitalCareerInstitute/dci-boilerplate-I
         - Present the HTML/CSS Sass Bootstrap boilerplate and how to use including dependencies,
@@ -26,48 +26,77 @@
         - Running for development: npm start
         - Building for publication: npm run build
         - Publishing online: npm run deploy
-
+        
         Sass Variables: an introduction:
         - Variables concept: "A box to keep values in"
         - Vanilla CSS Variables: Defining in :root { --[name]: [value] }, Using with var(--[name], [fallback])
         - Sass variables: Defining with $[name]: [value], Using with $[name]
         - Sass maps: A collection of variables in one name
         - Mention a use case of variables: Customizing bootstrap colors
-     -->
+    -->
+
+    <!-- 1. Variables in sass -->
     <h1>SASS: Syntactically Awesome Style Sheets</h1>
 
-    <!-- 1. Global vs. local variables in css -->
-
-    <!-- 2. Variables in sass -->
     <div class="box">Box1</div>
     <div class="box">Box2</div>
     <div class="box special">Box3 special</div>
     <div class="box">Box4</div>
     <div class="box special">Box5 special</div>
 
-    <!-- 3. Nesting rules -->
-    <div class="nested">
-        <ul>
-            <li>Home</li>
-            <li>Option
-                <ul>
-                    <li>Option1</li>
-                    <li>Option2</li>
-                </ul>
-            </li>
+    <!-- 2. Nesting rules -->
+    <div class="nav">
+        <ul class="menu">
+            <li> Home </li>
+            <li>Projects</li>
             <li>Contact</li>
         </ul>
     </div>
-    <p>Hello Sass</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat autem ullam a neque suscipit rerum nobis
+        aspernatur blanditiis nihil odio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat autem ullam a neque suscipit rerum nobis
+        aspernatur blanditiis nihil odio!</p>
 
-    <!-- 4. Sass maps -->
+    <!-- 3. map -->
+    <!-- map ist ein Datentyp, der eine geordnete Liste von Schlüssel-Wert-Paaren enthält. Es ist ähnlich wie ein assoziatives Array oder ein Hash in anderen Programmiersprachen. Jeder Schlüssel in der map ist eindeutig und kann auf den zugehörigen Wert zugreifen.
 
-    <!-- 5. @import and partial -->
+    Man kann map in SASS verwenden, um eine Gruppe von Variablen oder Einstellungen zu definieren und zu speichern, anstatt jedes Element einzeln zu definieren. Es kann auch nützlich sein, um eine Reihe von Optionen für eine Funktion zu übergeben, oder um den Zugriff auf verwandte Variablen zu erleichtern.
+ -->
+    <div class="map_container">Map Container</div>
 
-    <!-- 6. @extend -->
-    
-    <!-- 7. @mixin and @include -->
+    <!-- 4. @extend -->
+    <!-- @extend ist eine Funktion in SASS, die es ermöglicht, eine CSS-Klasse auf eine andere Klasse zu erweitern und somit deren Eigenschaften zu übernehmen. Es wird oft als eine Art von Vererbung in CSS bezeichnet, da eine Klasse die Eigenschaften einer anderen Klasse erbt. -->
 
+    <button class="button">Click me</button>
+    <button class="submit-button">Submit</button>
+
+
+    <!-- 5. @mixin and @include -->
+    <!-- @mixin und @include sind Funktionen in Sass, die es ermöglichen, wiederverwendbaren Code zu schreiben und zu verwenden. Mit @mixin können wir eine Gruppe von CSS-Deklarationen definieren, die später wiederverwendet werden können, während @include das Mischen dieser Deklarationen in eine Regel oder einen Selektor ermöglicht. -->
+    <div class="container-1">
+        Container 1
+    </div>
+    <div class="container-2">
+        Container 2
+    </div>
+
+
+    <!-- 6. @import and partial -->
+    <!-- @import und partial sind Funktionen in Sass, die es ermöglichen, Stylesheets zu importieren und den Code besser zu organisieren.
+    Mit @import können Sie ein externes Stylesheet in ein anderes Stylesheet importieren. 
+    -->
+    <!-- Schau mal die Datei `_variables.scss` -->
+
+
+    <!-- 7. Bootstrap Sass -->
+    <!-- Bootstrap Customization with Sass -->
+    <!-- 
+        Bootstrap Sass ist eine Version des beliebten Front-End-Frameworks Bootstrap, die auf der CSS-Erweiterungssprache Sass basiert. Bootstrap bietet eine Reihe von vordefinierten CSS-Klassen und Komponenten, die Entwicklern helfen, schnell und einfach ansprechende und responsive Webseiten zu erstellen.
+
+        Bootstrap Sass geht einen Schritt weiter und nutzt die Vorteile von Sass, um die Stylesheets von Bootstrap einfacher zu verwalten und anzupassen. Durch die Verwendung von Sass-Variablen, Mixins und Funktionen können Entwickler das Erscheinungsbild von Bootstrap-Komponenten ändern und an ihre spezifischen Anforderungen anpassen, ohne das Framework zu ändern oder umständlichen Inline-CSS-Code hinzufügen zu müssen
+    -->
+    <button class="btn btn-primary">Primary Button</button>
+    <button class="btn btn-secondary">Secondary Button</button>
 </body>
 
 </html>
