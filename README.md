@@ -46,7 +46,7 @@ git init
 git add .
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:<<Your-GitHb-Username>>/<<Repository-Name>>.git
+git remote add origin git@github.com:'Your-GitHb-Username'/'Your-Project-Name'.git
 git push -u origin main
 ```
 
@@ -91,4 +91,4 @@ git push
 npm run build
 npm run deploy
 ```
-**Your site is live at https://<<Your-GitHb-Username>>.github.io/<<Repository-Name>>/**
+**Your site is live at https://'Your-GitHb-Username'.github.io/'Your-Project-Name'/**
